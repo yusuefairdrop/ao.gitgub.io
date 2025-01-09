@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/back.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto; /* Lebar akan menyesuaikan isi */
+  max-width: 600px; /* Maksimal lebar untuk membatasi tampilan */
+  border-radius: 25px;
+  padding: 30px;
+  border: 1px solid #ffffff40;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+.image .profile-pic{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.data h2{
+  font-size: 33px;
+  font-weight: 600;
+}
+span{
+  font-size: 18px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.row .info{
+  text-align: center;
+  padding: 0 20px;
+}
+.links{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.links .link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 25px; /* Menambahkan lebar padding */
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  flex-basis: calc(25% - 15px); /* Membagi link menjadi kolom yang rapi */
+  max-width: 140px; /* Lebih lebar untuk Instagram */
+  min-width: 110px;
+}
+.links .link:hover{
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient ungu ke biru */
+  color: #ffffff; /* Warna text menjadi putih */
+}
+.links .link i{
+  margin-right: 8px;
+  font-size: 18px;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.buttons .btn{
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  white-space: nowrap;
+  background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%);
+}
+.buttons .btn:hover{
+  box-shadow: inset 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 20px;
+    max-width: 90%;
+  }
+  .data h2 {
+    font-size: 28px;
+  }
+  .data span {
+    font-size: 16px;
+  }
+  .links .link {
+    flex-basis: calc(50% - 15px);
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    height: 120px;
+    width: 120px;
+  }
+  .data h2 {
+    font-size: 24px;
+  }
+  .data span {
+    font-size: 14px;
+  }
+  .links .link {
+    flex-basis: 100%;
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+  .links .link i {
+    margin-right: 5px;
+  }
+}
